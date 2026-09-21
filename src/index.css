@@ -50,6 +50,24 @@ footer a:hover { opacity: .48; }
 
 .nav-mark span { font-size: 8px; margin-top: 2px; letter-spacing: 0; }
 .mobile-menu-btn { display: grid; place-items: center; width: 44px; height: 44px; border: 0; background: transparent; }
+.lang-toggle {
+  display: inline-grid;
+  min-width: 54px;
+  height: 34px;
+  place-items: center;
+  padding: 0 10px;
+  border: 1px solid #c8c8c0;
+  border-radius: 999px;
+  background: rgba(247,247,244,.76);
+  color: #343430;
+  font-size: 11px;
+  font-weight: 650;
+  letter-spacing: .04em;
+  cursor: pointer;
+  transition: border-color .25s ease, background .25s ease, transform .25s ease;
+}
+.lang-toggle:hover { border-color: #77776f; background: #fff; transform: translateY(-1px); }
+.lang-toggle:active { transform: translateY(0) scale(.97); }
 
 .mobile-menu {
   position: fixed;
@@ -321,6 +339,52 @@ footer a:hover { opacity: .48; }
   max-width: 100%;
   white-space: nowrap;
 }
+
+.is-ku {
+  font-family: Tahoma, Arial, sans-serif;
+}
+.is-ku .site-nav nav,
+.is-ku .nav-contact,
+.is-ku .hero-reveal,
+.is-ku .primary-cta,
+.is-ku .hero-specimen-topline,
+.is-ku .hero-specimen-index,
+.is-ku .hero-sheet-head,
+.is-ku .hero-sheet-foot,
+.is-ku .processor-box span,
+.is-ku .project-type,
+.is-ku footer {
+  letter-spacing: 0;
+}
+.is-ku .hero-title {
+  max-width: 800px;
+  font-size: clamp(4rem, 6.6vw, 6.6rem);
+  line-height: .94;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.is-ku .hero-title-primary {
+  display: block;
+  white-space: nowrap;
+}
+.is-ku .hero-title-final { white-space: nowrap; }
+.is-ku .section-title {
+  max-width: none;
+  letter-spacing: 0 !important;
+  line-height: 1 !important;
+  text-transform: none;
+}
+.is-ku .hero-sheet-foot span { line-height: 1.55; }
+.is-ku .wire-card-back { text-align: right; }
+.is-ku .wire-card-back > span { letter-spacing: 0; }
+.is-ku .idea-node strong { letter-spacing: 0; }
+[dir='rtl'] .profile-meta-primary {
+  border-right: 0;
+  border-left: 1px solid #d1d1cb;
+}
+[dir='rtl'] .process-row > svg { transform: scaleX(-1); }
+[dir='rtl'] .process-row:hover > svg { transform: scaleX(-1) translateX(8px); }
+[dir='rtl'] .contact-link:hover svg { transform: translate(-4px,-4px); }
 
 /* Reference-led process flow */
 .wire-stage {
@@ -735,6 +799,20 @@ footer a:hover { opacity: .48; }
     line-height: .86 !important;
     letter-spacing: -.055em !important;
   }
+  .is-ku .hero-title {
+    font-size: clamp(2.7rem, 12.2vw, 3.85rem);
+    line-height: .98;
+    letter-spacing: 0;
+  }
+  .is-ku .section-title {
+    font-size: clamp(1.55rem, 6.8vw, 2.45rem) !important;
+    line-height: 1.08 !important;
+    letter-spacing: 0 !important;
+  }
+  .is-ku .hero-specimen-topline,
+  .is-ku .hero-specimen-index,
+  .is-ku .hero-sheet-head { font-size: 6px; }
+  .is-ku .processor-box span { font-size: 6.5px; }
   .wire-stage { width: 100%; min-height: 620px; }
   .wire-main { width: 100%; height: 540px; }
   .wire-inputs { gap: 7px; }
